@@ -1,0 +1,146 @@
+
+@String
+at charAT codePointAt charCodeAt concat endWIth startWith trim trimLeft trimRight trimSTart trimENd padStart padEnd localeCompare
+toLocaleUpperCase toLocaleLowerCAse toLowerCAse toUpperCase includes indexOf lastIndexOf slie split substring search reapeat replace
+match martchAll toString valueOf 
+@Number
+toFixed toPrecison toString valueOf parseINt parseFloat isNaN isFinite isSafeInteger isInteger
+@Array
+at copyWithin concat every entries fill filter find findIndex flat fkatMap forEach join keys map includes indexOf lastIndexOf sort reverse
+shift unshift slice splice pop push reduce reduceRight toSTring values
+@OBject
+assign create defineProperties defineProperty seal isSealed freeze isFrozrn preventExtensible isExtensible entries fromEntries is keys values toSTring
+@Math
+random round floor ceil min max trunc
+@Classes
+abstract implements extends interface private public protected readonly # ? ! constructor super this static
+@Dates
+getDate getDay getFullYEar getMonth getHpours getMinutes getSeconds getMIlliseconds getTime getTimezoneOffset getUTCDate getUtcDay
+getUTCFullYEar getUtcMonth getUTCHours getUTCMinute sgetUTCSecondsgetUTCMilliseconds setDate seFullYear setMonth setHours setMinutes
+setSeconds setMilliseconds setTime setUTCDate setUTCFullYear setUTCMonth setUTCHours setUTCMinutes setUTCSeconds setUTCMilliseconds
+setTime toDateString toISOSTring toJSON toLoclaeSTring toLocaleTimeSTring toLoclaeDateString toUTCSTring toTimeSTring toSTring
+@Regex
+[] () | * + . ? ?= ?! ^ $ {n} {x|y} {x,} \w \W \d \D
+
+1 activeElements
+2 addEventListener() 
+3 adopteNode() this method get element from another frame work like iframe
+4 baseURI // return current url
+4 body 
+6 characterSet // return character encoded tyep like  UFT8
+7 document.open 
+8 document.write
+9 document.close
+10 cookie // return all cookies in a single string
+11 createAttribute // create html element attribute 
+12 setAttributeNode() // set html element attribute
+13 createElement // this help to create dom element
+14 textContent // with use that you can set elemnt text
+15 createDocumentFragment // this help to store group elemnts and complete the task u can append into document element
+16 appendChild // help to push element into dom element
+?17 createEvent // create event ? 
+18 defaultView
+19 designMode // nice this allow to edit text on web when it on
+20 doctype
+21 document.documentElement // return whole html elements
+22 document.documentURI // return current url
+23 document.domain // like www.google.com
+24 embeds // return all embeds elements <embeds src="">
+25 document.forms | document.forms[0] | document.forms.item(0)
+26 getElementById() // help to select element by id 
+27 getElementsByClassName() // help to select element by class name
+28 getElementsByName() // help to select element by name <input type="button" name="fname">
+29 getElementsByTagName() // help to select element by tag name
+30 hasFocus() // it retur true or flase
+31 head // return head element 
+32 images // return all dom <img /> elements
+33 implementation // not that much usefull
+34 document.importNode // help to import node from other frame and module
+35 lastModified // this return last doc edit date
+36 links // this return all <a /> elements
+37 normalize() // this method removes empty text nodes
+38 querySelector() // this return first elemnt 
+39 querySelectorAll() // this return all element
+40 readyState // return document current loading state
+41 referrer // this return url which loaded current document
+42 removeEventListerner // this method help to remove event on particular element you have to give event type and that function which is working with the event
+43 scripts // this return script in html 
+44  title // it retun title of documents
+45 URL // return current url
+46 write // document.write is use to jsx and simple text
+47 writeInt // this is not overwrite all element this pust the jsx and text into html
+-----------------------------@HTML_ELEMENT ------------------------
+48 appendChild() // this method push element into selected element
+49 attributes // this return all attributes of elements
+50 focus // this method make focus on a desire element 
+51 blur // this method make out of focus on focus element
+52 childElementCount
+53 children // this method return all child elemnt in selcted elemnt like document.body.children
+54 childNodes // this element also return selected elements inside elements
+55 classList // this help to add remove or toggle with extsting class
+56 className // this change current class to assign
+57 click() // this help to run click on any elemnt
+58 clientHeight // this return height of selected element in px 
+59 clientWidth // this return width of selected element in px
+60 clientTop // this return top border width of selected element
+61 clientLeft // this return left border width of selected element
+62 cloneNode(true) // it return clone of selected element 
+63 closest // this find closest match css selector element
+64 compareDocumentPosition() // it compare elemnt position
+65 conatins(element) // this return true or false id element inside a selected conatiner
+66 contentEditable // this make selected element editable
+67 dir // rtl ltr auto this method allow to to set direction of text
+68 firstChild // this method help to select firect child element into selected element
+69 firstElementChild // this method also return first element of selected element
+70 getAttributes // this method return element from selector element
+71 getAttributeNode // this method return element from selector element
+72 getBoundingClientRect // getElementById('id').getBoundingClientRect().width | height | top | left | bottom | right
+73 hasAttribute // hasAttribute('type') this method check attribute into a element
+74 hasAttributes // this method check element have attribute or not
+75 hasChildNodes // this method check element have child element or not
+76 id // this return id value of element
+77 innerHTML // this help to set innerHTML into 
+77 innerText // this help to set innerText or get
+78 insertAdjacentElement(position, element) // afterend | afterbegin | beforeend | beforebegin -- this method help to change posiion of element between each other
+79 insertAbjacentHTML(postion ,HTML =) // afterend | afterbegin | beforeend | beforebegin -- this method help to change position of HTML
+80 insertAbjacentText(postion ,HTML =) // afterend | afterbegin | beforeend | beforebegin -- this method help to change position of HTML
+81 element.insertBefore(new, existing) =) 
+82 isContentEditable // property returns true if the content of an element is editable. property is read-only.
+83 isEqualNode() // this method check two element that are equal or not
+84 isSameNode() // this method check two nodes are the same node.
+86 lang // this method return the code of language
+87 lastChild // this return last child of selected element
+88 lastElementChild // this return last element from selected element
+89 matches() // this method returns true if an element matches a specific CSS selector(s).
+90 namespaceURI // property returns the URI of an elements namespace.
+91 nextSibling // property returns the next node on the same tree level.
+92 nextElementSibling // property returns the next element in the same tree level.
+93 nodeName // this return  node tag name
+94 nodeType // The nodeType property in DOM returns 1 for elements, 2 for attributes, 3 for text and 8 for comments.
+95 nodeValue // property sets or returns the value of a node.
+96 offsetHeight // return height of selected element with padding + border 
+97 offsetWidth // return width of selected width padding + border
+98 offsetParent // returns the nearest ancestor that has a position other than static.
+99 offsetTop // return top position of element in px
+100 offsetLeft // return left position of element in px
+101 outerHTML // this replace selected element with give element
+102 outerTExt // this replace selected element with given text
+103 parentNode // this return parent node of slected element 
+104 parentElement // this return parent element of selected element 
+105 previousSibling // this return element of selected previos sibling node
+105 previousElementSibling // this return previos element od selected element
+106 querySelector() // this return first element
+107 querySelectorAll() // this return array of element 
+108 remove() // this method delete node from documents
+109 removeAttribute() // this method remove attribute 
+110 removeAtrributeNode() // this method remove attribute
+111 removeChild(element) this method remove inside child element of parent element
+112 replaceChild(newNode , currentElement) // this method replace child element with new element
+113 scrollHeight //property returns the height of an element including padding, but excluding borders, scrollbars, or margins.
+114 scrollIntoView // this make foucs on element where you want to make focus
+115 scrollLeft // this method give you scroll in px like document.body 
+116 scrollTop // this method is also give you scroll from top 
+117 scrollWidth //property returns the width of an element including padding, but excluding borders, scrollbars, or margins.
+118 setAttribute(type,value) // this mathod allow you to set attribute with value in element
+119 setAttributeNode(type,value) // this method is also help to set attribute with value
+120 textContent // this help to change text content
