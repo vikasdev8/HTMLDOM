@@ -144,3 +144,23 @@ setTime toDateString toISOSTring toJSON toLoclaeSTring toLocaleTimeSTring toLocl
 118 setAttribute(type,value) // this mathod allow you to set attribute with value in element
 119 setAttributeNode(type,value) // this method is also help to set attribute with value
 120 textContent // this help to change text content
+
+/**
+-----------------------@NODE_JS --------------------------------------
+@FS_Module
+__dirname // this give file path without name of file
+__filename // this give full path with file name also
+path.join(__dirname,'..') // this method help to join path
+mkdir(path[,{recursive:true}]) // Async create directory if recursion is true when folder is already there then mkdir replace that
+readdir(path,{withFileTypes:true}) // this take path of folder which u want to read and return array of file name
+rmdir(path,{recursive:true, maxLimit:num}) //if directory will not empty then u have to use recursive:true this method folder of given path. this return undefine
+rm(path, {recursive:true}) // this method also work same as rmdir() above
+writeFile(filename | filepath + filename, 'content of file', {option}) // this return undefine and create file on specify path
+readFile(filename|filename+filepath, 'utf-8') // this will return buffer array if u not padd encoding 
+appendFile(filename|filename+filepath,'content') // this will return undefined
+copyFile(src,dest) // src- where u from want to copy | dest where u want to copy data or in which file / return undefine
+stat(directorypath|filepath) // return file details and it have function also like isDirectory() isFile()
+open 
+read
+close
+*/
