@@ -164,3 +164,19 @@ open
 read
 close
 */
+/**
+---------------@Multer --------------------
+upload = multer.diskStorage( { filename: (req, file, cb) => { return cb(error, filename)} ,
+                        destination: (req, file, cb) =>{ return cb(error, path)}  } ) // this have 2 parameters fieldname | destination
+upload = multer.memoryStorage()
+multer({ dest|storage: string path | upload, 
+        fileFilter: (req, file, cb)=>{ return cb(error , true)},
+        limits:{ fieldNameSize : 100 , fieldSize: 1048576 (1mb), fields: infinity, fileSize: infinity, files: infinity, parts: infinity, headerPairs: 2000 },
+        preservePath: ? })
+multer().single('fieldName'); // this is use when u upload a single file
+multer().array('fieldName',count of files u allow); // this is use when u upload multiple file from single field
+multer().field({ name: fieldName, maxCount: count of files u allow }) // this is use when u have multi field and multi files
+multer.none() // this use when u only want to get text data in req.body
+multer.any() // accepts all files that comes from client
+
+*/
