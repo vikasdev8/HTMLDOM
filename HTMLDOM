@@ -163,6 +163,11 @@ stat(directorypath|filepath) // return file details and it have function also li
 open 
 read
 close
+existsSync() // check the folder is exsists or not
+mkdirSync() // create folder sync 
+read(buffer, offset, length, position)
+write(buffer, offset[, length[, position]])
+rename(oldPath, newPath)
 */
 /**
 ---------------@Multer --------------------
@@ -178,5 +183,14 @@ multer().array('fieldName',count of files u allow); // this is use when u upload
 multer().field({ name: fieldName, maxCount: count of files u allow }) // this is use when u have multi field and multi files
 multer.none() // this use when u only want to get text data in req.body
 multer.any() // accepts all files that comes from client
-
+----------------------@Path ------------
+__dirname
+__filename
+path.join()
+path.extname()
+path.relative(from, to)
+path.normalize()
+path.dirname(path+filename)
+path.resolve(path) // give normal path
+path.isAbsolute(path) // true | flase
 */
