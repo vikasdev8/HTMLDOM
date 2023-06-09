@@ -429,7 +429,99 @@ list of all query operators in MongoDB, according to the MongoDB documentation, 
 * $unset // { $unset:[ "field"] } // this method help to delete filed with value in aggregation
 * $unwind // this method change array to object // { $unwind: { path: "field", includeArrayIndex: "arrayIndex" } }
 
-
+/**
+************************@Aggregation_Operators *******************
+* $abs: { $abs: number } // if number is positive or native they ✨✨ return only positive number 
+?* $accumulator // this operator is use to create ne operator 
+?* $acos
+?* $acosh
+* $add // {$add : [ "field1", "field2" ] }
+* $addToSet // { $addToSet: "$field" } // this method avaiable in  bucket bucketAuto group // this add all coming element into array
+* $allElementsTrue // { $allElementsTrue: [ "$field" ] } // this method check array elements have not nullest value
+* $anyElementsTrue // { $anyElementTrue: [ <expression> ] } // same as above
+* $arrayElemAt // { $arrayElemAt: [ "$arrayField", indexnumber ] } // this method choose only those element which index u provide
+?* $$arrayToObject //this methods change array into object
+* $avg: { $avg: [ "numbers | or filed" ] }
+?* $bottom //it return last document of collection
+?* $bootomN
+* $ceil // { $ceil: 4.5 } retrun 5
+* $cmp // { $cmp: [ "$field1", "$filed2" ] }
+* $concat // { $concat: [ "$field1", "$filed2" ]  }
+* $concatArrays // { $concat: [ "$field1", "$filed2" ]  }
+* $cond // { $cond: [ <boolean-expression>, <true-case>, <false-case> ] } || { $cond: { if: <boolean-expression>, then: <true-case>, else: <false-case> } }
+* $convert: // { $convert: { input: <expression>, to: <type expression>, onError: <expression>,  // Optional. onNull: <expression>    // Optional. } }
+* $count: // { $count:{} } avaiable at: $bucket, $bucketAuto, $group, $setWindowFields
+* $dateAdd: //{ $dateAdd: { startDate: <Expression>, unit: <Expression>, amount: <Expression>, timezone: <tzExpression> } }
+* $dateDiff // { $dateDiff: { startDate: <Expression>, endDate: <Expression>, unit: <Expression>, timezone: <tzExpression>, startOfWeek: <String> } }
+* $dateFromParts // { $dateFromParts : { 'year': <year>, 'month': <month>, 'day': <day>, 'hour': <hour>, 'minute': <minute>, 'second': <second>, 'millisecond': <ms>, 'timezone': <tzExpression> } }
+* $dateFromSTring // { $dateFromString: { dateString: <dateStringExpression>, format: <formatStringExpression>, timezone: <tzExpression>, onError: <onErrorExpression>, onNull: <onNullExpression> } }
+* $dateToString // { $dateToString: { date: <dateExpression>, format: <formatString>, timezone: <tzExpression>, onNull: <expression> } }
+* $dateSubtract //{ $dateSubtract: { startDate: ISODate("2021-03-31T12:10:05Z"), unit: "month", amount: 1 } }
+* $dayOfMonth // { $dayOfMonth: <dateExpression> }
+* $dayOfWeek // { $dayOfWeek: <dateExpression> }
+* $dayOfYear // { $dayOfYear: <dateExpression> }
+* $divide: { $divide: [ "field1", "field2" ] }
+* $filter // { $filter: { input: <array>, cond: <expression>, as: <string>, limit: <number expression> } } 
+* $first // { $group: { __id: "$field", customnamefield: { $first: "$field" } } }
+* $firstN : // { $group: { __id: "$field", customnamefield: { $firstN: "$field", n:limit } } }
+* $first: // { $first: "$arrayField" } //this method work with array
+* $firstN: // { $firstN: "arrayField", n: limit }
+* $floor: // { $floor: 45.5 } return 45
+* $function // { $function:{ body: function ( args ) { code  }, args: [ "$field" ], lang: "js" } }
+?* $getField: // { $getField: { field: <String>, input: <Object> } }
+* $year// { $year: "$field" } return year
+* $month: // { $month: "$field" }  return month
+* $hour: // { $hour: "$field" } return hour
+* $minute: // { $minute: "$field" } return minute
+* $second: // { $second: "$field" } return second
+* $millisecond: // { $millisecond: "$field" } return millisecond
+* $ifNull: // { $project: { value: { $ifNull: [ "$checkingFiledName", "$IfnotNUllreplaceFieldNAme", "$IfnullFieldname" ] } } }
+* $indexOfArray: //{ $indexOfArray: [ "$arrayFiled", "ElementToSearch", "indexFromWheretoStart", "indexOfWheresearchtoend" ] }
+* $indexOfBytes: // { $indexOfBytes: [ "$stringFiled", "REgex|String", "indexFromWheretoStart", "indexOfWheresearchtoend" ] }
+* $indexOfCP: // { $indexOfCP: [ "$stringFiled", "REgex|String", "indexFromWheretoStart", "indexOfWheresearchtoend" ] }
+* $last // { $group: { __id: "$field", customnamefield: { $last: "$field" } } }
+* $lastN : // { $group: { __id: "$field", customnamefield: { $lastN: "$field", n:limit } } }
+* $last: // { $last: "$arrayField" } //this method work with array
+* $lastN: // { $lastN: "arrayField", n: limit }
+* $let: // { $let: { vars: { <var1>: <expression>, ... }, in: <expression> } }
+* $literal :// { $literal: <value> }
+* $ltrim :// { $ltrim: { input: <string>,  chars: <string> } }
+* $map : // { $map: { input: <expression>, as: <string>, in: <expression> } }
+* $max: // { $max: "$field" }
+* $min: // { $min: "$field" }
+* $maxN: // { $maxN: { input:"$field", n:limitnumber } }
+* $minN : // { $minN: { input:"$field", n:limitnumber } }
+* $mergeObjects:// { $mergeObjects: [ <document1>, <document2>, ... ] }
+* $mod ://Divides one number by another and returns the remainder. { $mod: [ <expression1>, <expression2> ] }
+* $multiply:// { $multiply: ["$field1", "$field2"] }
+* $objectToArray:// { $objectToArray: <object> }
+* $pow :// { $pow: [ <number>, <exponent> ] }
+* $push :// { $push: <expression> }
+* $range: // { $range: [ <start>, <end>, <non-zero step> ] } example: { $range: [ 0, 10, 2 ] } result: [ 0, 2, 4, 6, 8 ]
+* $reduce: // { $reduce: { input: ["a", "b", "c"], initialValue: "", in: { $concat : ["$$value", "$$this"] } } }
+* $regexFind:// { $regexFind: { input: <expression> , regex: <expression>, options: <expression> } }
+* $regexFindAll:// { $regexFindAll: { input: <expression> , regex: <expression>, options: <expression> } }
+* $regexmatch : // { $regexMatch: { input: <expression> , regex: <expression>, options: <expression> } } // true ||  false
+* $replaceOne: // resultObject: { $replaceOne: { input: "$Field", find: "string", replacement: "string" } }
+* $replaceAll: // resultObject: { $replaceOne: { input: "$Field", find: "string", replacement: "string" } }
+* $reverseArray: // { $reverseArray: "$field" }
+* $round: // { $round : [ "$field", 0 ] }
+* $setDifference: // { $setDifference: [ [ "a", "b" ], [ [ "a", "b" ] ] ] } return [ "a", "b" ]
+* $setEquals:// { $setEquals: [ [ "a", "b", "a" ], [ "b", "a" ] ] } return true
+* $setField:// { $setField: { field: <String>, input: <Object>, value: <Expression> } }
+* $setIntersection: // Takes two or more arrays and returns an array that contains the elements that appear in every input array. { $setIntersection: [ <array1>, <array2>, ... ] }
+* $setUnion:// { $setUnion: [ <expression1>, <expression2>, ... ] }
+* $size: // retrun size of array { $size:"$field" }
+* $slice: // { $slice:[<array>, <position>, <n> ] }
+* $sort:// { $sort:{ input:"$fieldArray", sortBy:1 || { "nestedFieldName": 1 } } }
+* $split: // { $split: [ "$field", "speratorstring" ] }
+* $sqrt: // { $sqrt: <number> }
+* $strLenBytes: // return string length { $strLenBytes:"$string_Field" }
+* $strLenCP:// { $strLenCP: <string expression> }
+* $substr:// { $substr: [ <string>, <start>, <length> ] }
+* $substract:// { $subtract: [ <expression1>, <expression2> ] }
+* sum:// { $sum: }
+*/ 
 
 |--------------------------------------------------
 */
